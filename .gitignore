@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Generated files
+previews/
+js/db.js
+FoxuLaserCuts.exe
+
+# Build artifacts
+*.rsp
+benchmark_results/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp
+*.tmp
+*.log
