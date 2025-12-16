@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoxuLaserCuts | CNC Catalog</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="background-mesh"></div>
+    <div class="scanline"></div>
+
+    <div class="logo">
+        <i class="fa-solid fa-fire-burner"></i>
+        <span><span class="brand-fox">Foxu</span><span class="brand-laser">LaserCuts</span></span>
+    </div>
+    <div class="status-bar">
+        <span class="status-item"><i class="fa-solid fa-signal"></i> ONLINE</span>
+        <span class="status-item"><i class="fa-solid fa-cloud"></i> HUGGINGFACE</span>
+    </div>
+    </header>
+
+    <main class="container">
+        <!-- Controls Section -->
+        <section class="controls">
+            <div class="search-box">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Buscar archivo CNC...">
+            </div>
+
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb" id="breadcrumb">
+                <span class="breadcrumb-item active" data-level="0"><i class="fa-solid fa-home"></i> Todos</span>
+            </nav>
+
+            <div class="categories" id="categoryFilters">
+                <!-- Categories will be injected by JS -->
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="gallery" id="galleryGrid">
+            <!-- Items will be injected by JS -->
+        </section>
+    </main>
+
+    <!-- Detail Modal -->
+    <div class="modal-backdrop" id="detailModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal"><i class="fa-solid fa-times"></i></button>
+
+            <div class="modal-layout">
+                <div class="modal-image">
+                    <img id="modalImg" src="" alt="Preview">
+                </div>
+                <div class="modal-info">
+                    <span class="tag" id="modalCategory">Category</span>
+                    <h2 id="modalTitle">Title</h2>
+                    <p id="modalDesc">Description goes here...</p>
+
+                    <div class="modal-actions">
+                        <a href="#" target="_blank" id="downloadBtn" class="action-btn download">
+                            <i class="fa-solid fa-cloud-arrow-down"></i> Descargar Paquete (HuggingFace)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Core Scripts -->
+    <script src="js/db.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
